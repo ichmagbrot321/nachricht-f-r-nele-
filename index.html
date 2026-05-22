@@ -2,103 +2,109 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Nachricht für Nele</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
+            align-items: flex-start;
+            padding: 10px;
+            padding-top: 20px;
+            padding-bottom: 40px;
         }
 
         .container {
             background: white;
             border-radius: 20px;
-            padding: 40px;
-            max-width: 650px;
+            padding: 25px;
+            max-width: 100%;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             text-align: center;
         }
 
         h1 {
             color: #333;
-            margin-bottom: 10px;
-            font-size: 2.2em;
+            margin-bottom: 8px;
+            font-size: 1.8em;
         }
 
         .subtitle {
             color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-size: 0.95em;
         }
 
         .lock-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
+            font-size: 3em;
+            margin-bottom: 15px;
         }
 
         .countdown {
             background: #f5f5f5;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 20px;
-            margin: 20px 0;
-            font-size: 1.2em;
+            margin: 15px 0;
+            font-size: 1em;
             color: #555;
         }
 
         .countdown-number {
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: bold;
             color: #667eea;
-            margin: 10px 0;
+            margin: 8px 0;
         }
 
         button {
             background: #667eea;
             color: white;
             border: none;
-            padding: 15px 40px;
+            padding: 18px 50px;
             font-size: 1.1em;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 20px;
+            margin-top: 15px;
+            width: 100%;
+            max-width: 300px;
+            touch-action: manipulation;
         }
 
-        button:hover:not(:disabled) {
+        button:active:not(:disabled) {
             background: #764ba2;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transform: scale(0.98);
         }
 
         button:disabled {
             background: #ccc;
             cursor: not-allowed;
+            opacity: 0.7;
         }
 
         .message {
             display: none;
             text-align: left;
-            margin-top: 30px;
-            padding: 30px;
+            margin-top: 25px;
+            padding: 20px;
             background: #f9f9f9;
             border-radius: 15px;
-            border-left: 5px solid #667eea;
-            line-height: 1.8;
+            border-left: 4px solid #667eea;
+            line-height: 1.7;
             color: #333;
-            font-size: 1.05em;
-            animation: fadeIn 1s ease;
+            font-size: 1em;
+            animation: fadeIn 0.5s ease;
         }
 
         .message.show {
@@ -106,22 +112,44 @@
         }
 
         .message p {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .date-info {
-            margin-top: 20px;
+            margin-top: 15px;
             color: #999;
-            font-size: 0.9em;
+            font-size: 0.85em;
         }
 
-        .heart {
-            color: #e74c3c;
+        @media (max-width: 380px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .countdown-number {
+                font-size: 1.8em;
+            }
+            
+            .message {
+                padding: 15px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (min-width: 481px) {
+            .container {
+                max-width: 500px;
+                padding: 35px;
+            }
         }
     </style>
 </head>
@@ -143,27 +171,30 @@
         </button>
 
         <div id="message" class="message">
-            <p>Hey Nele, wir haben den 12.08.2026 und ehrlich gesagt hatte ich schon lange Angst vor genau diesem Moment… 🫤 ich hab schon vorher geahnt, dass deine Psyche irgendwann komplett am Arsch sein könnte, weil du immer versucht hast, alles alleine zu schaffen und immer für dich selber stark zu sein, obwohl dich innerlich alles auffrisst… 🥺</p>
+            <p>Hey Nele, wir haben den 12.08.2026 und egal wann du das liest ich will das du zuerst eins weißt… ich habe immer an dich geglaubt 🥺❤ immer. Ich wusste wie stark du eigentlich bist auch wenn du selber das manchmal nicht sehen konntest.</p>
             
-            <p>Und falls das wirklich passiert ist, dann tut es mir weh, das mitanzusehen 💔 weil ich die ganze Zeit einfach nur für dich da sein wollte. Ich wollte dich begleiten, dich auffangen und dir zeigen, dass du das nicht alleine durchstehen musst 😕 aber du wolltest mich nicht ranlassen und genau davor hatte ich Angst…</p>
+            <p>Trotzdem hatte ich angst um dich 😕 weil ich gesehen habe wie viel du alleine mit dir rumgetragen hast und wie oft du versucht hast alles mit dir selbst auszumachen obwohl es dich innerlich auffrisst…</p>
             
-            <p>Aber falls du es wirklich alleine geschafft hast, dann will ich dir auch sagen, dass ich verdammt stolz auf dich bin 🥹❤ wirklich. Weil ich weiß, wie schwer das alles für dich war und wie viel Kraft dich das gekostet haben muss. Du kannst stolz auf dich sein, dass du trotz allem weitergemacht hast ☹️❤</p>
+            <p>Und ehrlich gesagt habe ich irgendwie schon geahnt das das irgendwann zu viel für dich werden könnte 😔 nicht weil du schwach bist sondern weil ein mensch nicht für immer alles verdrängen und alleine tragen kann. Genau deswegen wollte ich die ganze zeit für dich da sein 🫂 ich wollte dir zuhören, dich begleiten und dir zeigen das du das nicht alleine durchstehen musst.</p>
             
-            <p>Trotzdem hätte ich mir gewünscht, dass ich dich dabei hätte begleiten dürfen… nicht weil ich denke, dass du es alleine nicht kannst, sondern weil du mir wichtig bist und ich dich nicht alleine kämpfen sehen wollte 😔 ich hätte lieber jeden schweren Moment mit dir durchgestanden, als nur daneben zu stehen und nichts machen zu können…</p>
+            <p>Aber du hast es oft weggedrückt ☹️ du wolltest mich nicht richtig ranlassen oder hast so getan als wäre alles okay obwohl ich gemerkt habe das es das nicht ist… und genau das hat mir angst gemacht 💔</p>
             
-            <p>Und falls wir zu diesem Zeitpunkt nicht mehr zusammen sein sollten, dann will ich trotzdem, dass du weißt, dass ich dich immer noch liebe ❤ egal was passiert ist oder wie weit wir voneinander entfernt sind, du kannst mich immer kontaktieren, wenn du jemanden brauchst oder einfach reden willst ☹️📞</p>
+            <p>Falls du es geschafft hast dann bin ich wirklich verdammt stolz auf dich 🥹❤ weil ich weiß wie schwer alles für dich war und wie viel kraft dich das gekostet haben muss. Und falls du es nicht geschafft hast und deine psyche irgendwann komplett zusammengebrochen ist dann tut mir das unendlich leid 😔 aber bitte denk niemals das du schwach bist nur weil irgendwann alles zu viel wurde okay?</p>
             
-            <p>Und ich finde, solange kein Fremdgehen passiert ist, gibt es eigentlich immer eine zweite Chance 🫂 weil Menschen Fehler machen… Menschen kaputt gehen… und Menschen manchmal erst später merken, was sie wirklich brauchen. Aber Fremdgehen wäre das einzige, womit du mein Herz wirklich komplett zerstören würdest 💔</p>
+            <p>Trotzdem hätte ich mir gewünscht dich dabei begleiten zu dürfen ☹️❤ einfach damit du jemanden hast der dich hält wenn alles zu viel wird und damit du nicht das gefühl hast alleine kämpfen zu müssen…</p>
             
-            <p>Egal wie alles endet oder enden wird… du wirst immer ein Mensch sein, der mir unglaublich wichtig ist, Nele 🥺❤</p>
+            <p>Und falls wir zu diesem zeitpunkt nicht mehr zusammen sein sollten dann will ich trotzdem das du weißt das ich dich immer noch liebe oder zumindest nie aufgehört habe dich wirklich zu lieben 🥺 egal wie weit wir voneinander entfernt sind oder was zwischen uns passiert ist du kannst mich immer kontaktieren wenn du jemanden brauchst 📞❤</p>
+            
+            <p>Und ich finde solange kein fremdgehen passiert ist gibt es eigentlich immer eine zweite chance 🫂 weil menschen fehler machen und manchmal erst später merken wie wichtig jemand wirklich war. Aber fremdgehen wäre das einzige womit du mein herz wirklich komplett zerstören würde 💔</p>
+            
+            <p>Egal wie alles endet… du wirst immer ein mensch sein der mir unglaublich wichtig ist nele 🥺❤</p>
         </div>
 
         <p class="date-info">Freigabedatum: 12.08.2026</p>
     </div>
 
     <script>
-        // Zieldatum: 12. August 2026
-        const targetDate = new Date('2020-01-01T00:00:00');
+        const targetDate = new Date('2026-08-12T00:00:00');
         
         function updateCountdown() {
             const now = new Date();
@@ -176,12 +207,10 @@
             const daysDiv = document.getElementById('days-left');
             
             if (diff <= 0) {
-                // Zeit ist erreicht!
                 btn.disabled = false;
                 btn.textContent = "Nachricht lesen 💌";
-                countdownDiv.innerHTML = '<div style="color: #4CAF50; font-size: 1.3em;">✓ Die Nachricht ist jetzt verfügbar</div>';
+                countdownDiv.innerHTML = '<div style="color: #4CAF50; font-size: 1.2em; font-weight: 600;">✓ Die Nachricht ist jetzt verfügbar</div>';
             } else {
-                // Noch gesperrt
                 daysDiv.textContent = daysLeft;
             }
         }
@@ -195,15 +224,13 @@
             btn.style.display = 'none';
             lockIcon.textContent = '🔓';
             
-            // Scroll zur Nachricht
             setTimeout(() => {
-                message.scrollIntoView({ behavior: 'smooth' });
+                message.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
         }
         
-        // Initial ausführen und alle Sekunde aktualisieren
         updateCountdown();
-        setInterval(updateCountdown, 1000);
+        setInterval(updateCountdown, 60000);
     </script>
 </body>
 </html>
